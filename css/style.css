@@ -31,11 +31,15 @@
   opacity:0;
     }
 }
-@media (max-width:1200px){
+@media (max-width:780px){
     .text-overlay{
         display: none;
         transition: filter 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
     }
+}
+@font-face {
+    font-family: 'DinCondensed';
+    src: url('fonts/DinCondensed.ttf');
 }
 body{
     color:white;
@@ -98,15 +102,15 @@ flex-wrap: wrap;
     
 }
 .picture span{
-font-family: monospace;
+font-family: 'DinCondensed', monospace;
 white-space: nowrap;
-font-size: 38px;
+font-size: 2.375rem;
 font-weight: 700;
 text-transform: uppercase;
 text-align: left;
 }
 .picture p{
-    font-family: 'Lucida Sans Unicode';
+    font-family: 'Poppins';
     font-size: 18px;
     font-weight: 400;
     line-height: 16.02px;
@@ -120,6 +124,7 @@ text-align: left;
     left: 40%;
     transform:translate(-50%,-50%);
     color: white;
+    transition: filter 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
     animation: slideDown 0.4s forwards;
    }
    .hidden{
@@ -135,8 +140,12 @@ animation: slideDown 0.4s forwards, fadeOut 0.3s forwards;
 transition: filter 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
 }
 .text-overlay .more::after{
-    content: '\f063';
-    transform: rotate(180deg);
+    content: '➡';
+    font-size:25px;
+    font-weight: 700px;
+    margin-left: 10px;
+    transition: transform 0.3 ease;
+
 
 }
 .picture:hover .more{
